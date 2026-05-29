@@ -54,6 +54,26 @@ The available features include:
 
 Ticker identity is added through one-hot encoding so the model can distinguish between different stocks while still training in a shared sequence-learning setup.
 
+## Visualizations
+
+### Multi-stock closing trends
+
+This plot shows how the selected stocks evolve across time and gives a first view of their relative scale, movement patterns, and long-term behavior.
+
+![All stocks overview](images/all_stocks.png)
+
+### Training loss
+
+This figure tracks the optimization behavior of the LSTM model during training and helps assess whether the model is learning stably over epochs.
+
+![Training loss curve](images/train_loss.png)
+
+### Forecast performance
+
+This visualization compares predicted values against actual values and is the main qualitative check for model performance on unseen data.
+
+![Forecast performance plot](images/performance_plot.png)
+
 ## Problem Formulation
 
 This project explores two forecasting formulations:
