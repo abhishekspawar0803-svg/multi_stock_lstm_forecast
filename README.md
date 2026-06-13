@@ -143,6 +143,17 @@ Key engineering ideas covered in the notebook:
 - error evaluation with RMSE and MAE
 - visual comparison of predicted versus true trajectories
 
+## Results
+
+The LSTM was evaluated on a held-out test set for next-day close price prediction across FAANG stocks.
+
+| Model Variant    | RMSE  | MAE   |
+| ---------------- | ----- | ----- |
+| Price-based LSTM | 73.43 | 38.07 |
+| Log-return LSTM  | 2.73  | 1.44  |
+
+The log-return formulation substantially reduces absolute error by normalizing for price scale differences across stocks (e.g., AMZN vs. META). Prediction curves for each ticker are visualized in the `images/` folder. Note: financial forecasting metrics should be interpreted in context — a low RMSE does not guarantee profitable trading signals.
+
 ## Repository Structure
 
 ```text
